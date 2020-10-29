@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <p> Your BMI is equal to <strong>{{ entry }}</strong></p>
+    <p> This means you are in the <strong>{{ result }}</strong> range.</p>
+
+    {% if 'Healthy' in result %}
+<p> Continue Checking on your health to maintain your healthy state through exercise and good dieting</p>
+{% else %}
+        <p> Contact <a href="https://www.malkianutrition.com/services/#pricing"> Malkia Nutrition</a> for consultation on how to improve your health.</p>
+{% endif %}
+</body>
+</html>
