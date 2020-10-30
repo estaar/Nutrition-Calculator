@@ -12,8 +12,6 @@ def bmi_calculator():
     if request.method == 'POST':
         height = request.form.get('height', type=float)
         weight = request.form.get('weight', type=float)
-
-        print(weight, height)
         bmi = weight / (height**2)
 
         if bmi < 18.5:
@@ -27,9 +25,10 @@ def bmi_calculator():
         else:
             bmi_result = "Morbid Obese"
 
-        entry = bmi
+        entry = round(bmi, 2)
         result = bmi_result
         return render_template('bmi_results.html', entry=entry, result=result)
+
 
 if __name__ == '__main__':
     app.run(debug = True)
